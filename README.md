@@ -9,16 +9,16 @@ Estructure:
 
 - /assets
 
-- - /css
-- - - /960gs
-- - - - 720.css
-- - - - 960.css
-- - - - 1200.css
-- - - - mobile.css
-- - - glyphicon.css
-- - - style.css
-- - - style.less
-- - - oocss.css
+	/css
+		/960gs
+			720.css
+			960.css
+			1200.css
+			mobile.css
+		glyphicon.css
+		style.css
+		style.less
+		oocss.css
 
 - - /images
 - - - /html

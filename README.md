@@ -9,36 +9,36 @@ Estructure:
 
 - /assets
 
--- /css
---- /960gs
----- 720.css
----- 960.css
----- 1200.css
----- mobile.css
---- glyphicon.css
---- style.css
---- style.less
---- oocss.css
+- - /css
+- - - /960gs
+- - - - 720.css
+- - - - 960.css
+- - - - 1200.css
+- - - - mobile.css
+- - - glyphicon.css
+- - - style.css
+- - - style.less
+- - - oocss.css
 
--- /images
---- /html
---- /ico
---- /css
+- - /images
+- - - /html
+- - - /ico
+- - - /css
 
--- /js
---- /lib
----- adapt.min.js
----- jquery-1.10.2.min.js
----- /jquery-ui-1.10.3
------ /themes
------- /base
-------- ...
------ /ui
------- ...
+- - /js
+- - - /lib
+- - - - adapt.min.js
+- - - - jquery-1.10.2.min.js
+- - - - /jquery-ui-1.10.3
+- - - - - /themes
+- - - - - - /base
+- - - - - - - ...
+- - - - - /ui
+- - - - - - ...
 
--- /typo
---- /glyphicons
----- ...
+- - /typo
+- - - /glyphicons
+- - - - ...
 
 Libraries and Frameworks:
 =========================

@@ -17,6 +17,7 @@ Estructure:
         - style.css
         - style.less
         - oocss.css
+        - nyroModal.css
     - /images
         - /html
         - /ico
@@ -25,6 +26,8 @@ Estructure:
         - /lib
             - adapt.min.js
             - jquery-1.10.2.min.js
+            - jquery.nyroModal.custom.min.js
+            - jquery.nyroModal-ie6.min.js
             - /jquery-ui-1.10.3
                 - /themes
                     - /base
@@ -43,6 +46,7 @@ Libraries and Frameworks:
 - AdaptJS
 - 960 columns CSS Grid System
 - Glyphicons
+- NyroModal
 
 
 Last modified:

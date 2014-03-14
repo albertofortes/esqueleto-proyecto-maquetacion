@@ -5,12 +5,20 @@
 <title></title>
 <meta name="description" content="" />
 <link rel="author" href="humans.txt" />
+<link rel="apple-touch-icon" href="assets/images/ico/touch-icon-iphone.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="assets/images/ico/touch-icon-ipad.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="assets/images/ico/touch-icon-iphone-retina.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="assets/images/ico/touch-icon-ipad-retina.png" />
+<link rel="author" href="humans.txt" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="assets/css/oocss.css" rel="stylesheet" media="screen" />
 <link href="assets/css/style.css" rel="stylesheet" media="screen" />
 <link href="assets/css/glyphicon.css" rel="stylesheet" media="screen" />
 <!--[if lt IE 9]><script src="assets/js/html5shiv.js"></script><![endif]-->
 <script src="assets/js/lib/jquery-1.10.2.min.js"></script>
+<script src="assets/js/general.js"></script>
+<script src="assets/js/lib/angular.min.js"></script>
+<script src="assets/js/lib/ressController.angular.js"></script>
 <!-- adapstJS, llama al 960GS:-->
 <script>
 function myCallback(i, width) {
@@ -24,7 +32,7 @@ var ADAPT_CONFIG = {
     '0px    to 760px  = mobile.css',
     '760px  to 980px  = 720.css',
     '980px  to 1280px = 960.css',
-    '1280px to 1600px = 1200.css'
+    '1280px = 1200.css'
   ]
 };
 </script>
@@ -41,7 +49,24 @@ $(function() { $('.nyroModal').nyroModal(); });
 <!--/ nyromodal-->
 
 </head> 
-<body>
+<body ng-app ng-cloak ng-controller="RessController">
+
+	<div style="background:#ff9; padding:10px; margin: 20px auto; font-size:14px;" class="container_12" ng-if="windowWidth>=760"><!--ress with angularJS-->
+		<p><strong>Ejemplo de RESS con angularJS. Este texto sólo se verá en >= 760px</strong></p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	
+	<div ng-if="windowWidth<760"><!--ress with angularJS-->
+		<div style="background:#f99; padding:10px; margin: 20px auto; font-size:14px;" class="container_12" ng-if="windowWidth>450"><!--ress with angularJS-->
+			<p><strong>Ejemplo de RESS con angularJS. Este texto sólo se verá entre 450px y 760px</strong></p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+	</div>
+	
+	<div style="background:#099; padding:10px; margin: 20px auto; font-size:14px; color:#fff" class="container_12" ng-if="windowWidth<450"><!--ress with angularJS-->
+		<p><strong>Ejemplo de RESS con angularJS. Este texto sólo se verá en &lt;= 450px</strong></p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
 
 </body>
 </html>

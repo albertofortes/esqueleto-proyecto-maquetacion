@@ -1,0 +1,19 @@
+/* 
+	http://lesscss.org/#usage // server side usage:
+	$ npm install -g less
+	$ lessc styles.less styles.css
+*/
+
+/* *** mixins *** */
+.granadient(@start-color, @start-pos:0%, @end-color, @end-pos:100%) {
+	background: @start-color; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiM2NjY2NjYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMzMzMzMzMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  @start-color @start-pos, @end-color @end-pos); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(@start-pos,@start-color), color-stop(@end-pos,@end-color)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  @start-color @start-pos,@end-color @end-pos); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  @start-color @start-pos,@end-color @end-pos); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  @start-color @start-pos,@end-color @end-pos); /* IE10+ */
+	background: linear-gradient(to bottom,  @start-color @start-pos,@end-color @end-pos); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@start-color', endColorstr='@end-color',GradientType=0 ); /* IE6-8 */
+}

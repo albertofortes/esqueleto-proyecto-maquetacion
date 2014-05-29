@@ -1,0 +1,3 @@
+/* hacks ie8: createNode con AngularJS para el RESS mete : antes de las custom tags y estas dejan de ser entendidas por ExPLoter. */
+
+\:header, \:nav {display: block; /*sin display block no tira*/}
